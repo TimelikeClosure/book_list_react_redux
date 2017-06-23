@@ -1,5 +1,4 @@
 "use strict";
-
 import React, {Component} from 'react';
 import BookListItem from '../components/book_list_item';
 
