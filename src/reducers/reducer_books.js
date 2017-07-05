@@ -1,6 +1,5 @@
 "use strict";
 export default function() {
-    "use strict";
     return [
         {title: 'JavaScript: The Ugly Parts'},
         {title: 'Unshaven Clayshaper'},
