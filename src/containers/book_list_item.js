@@ -7,7 +7,10 @@ import {bindActionCreators} from 'redux';
 class BookListItem extends Component{
     render(){
         return (
-            <li className="list-group-item">Hello, I am a book. My name is "{this.props.book.title}"</li>
+            <li
+                className="list-group-item"
+                onClick={() => this.props.selectBook(this.props.book)}
+            >Hello, I am a book. My name is "{this.props.book.title}"</li>
         );
     }
 }
