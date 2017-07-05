@@ -4,20 +4,20 @@ import {connect} from 'react-redux';
 
 class BookDetail extends Component{
     render(){
+        if (!this.props.book){
+            return <div>Select a book to get started.</div>
+        }
+
         return (<div>
-            {(this.props.book !== null && this.props.book.hasOwnProperty('title')) ? this.props.book.title : ''}
+            <h3>Details for : {this.props.book.title}</h3>
+            <h5>Pages: {this.props.book.pages}</h5>
         </div>);
     }
 }
 
-function mapStateToProps(state = {}){
-    if (state.hasOwnProperty('activeBook')){
-        return {
-            book: state.activeBook
-        };
-    }
+function mapStateToProps(state = {}) {
     return {
-        book: null
+        book: state.activeBook
     };
 }
 
